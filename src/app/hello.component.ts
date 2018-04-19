@@ -1,9 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'hello-cmp',
   template: `<div>Hello, {{name}} !!</div>`,
-  styles: [`div { color: red; }`]
+  styles: [`div { color: red; }`],
+  encapsulation: ViewEncapsulation.Native
 })
 export class HelloComponent {
   @Input() name = 'World';
